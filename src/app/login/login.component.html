@@ -1,0 +1,40 @@
+
+<div class="d-flex justify-content-center flex-column align-items-center border">
+  <!-- Adicionar título para login -->
+  <h1 class="title">LOGIN</h1>
+
+  <!-- Adicionar input para email -->
+  <form class="">
+    <mat-form-field class="example-full-width mat-form-field" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+            placeholder="Ex. jorge@gmail.com">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Digite um endereço de email válido
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        O email é <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+  <!-- Adicionar input para senha -->
+  <form class="">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Senha</mat-label>
+      <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Insira uma senha válida
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        A senha é <strong>obrigatória</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+
+  <!-- Adicionar botão para logar e para cancelar -->
+  <div class="d-flex flex-row justify-content-center">
+    <button mat-raised-button color="primary" class="m-3 mt-5 col-12 col-md-6 col-sm-8">Login</button>
+    <button mat-raised-button class="m-3 mt-5 col-12 col-md-6 col-sm-8">Voltar</button>
+  </div>
+</div>

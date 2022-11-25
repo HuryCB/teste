@@ -1,0 +1,23 @@
+body {
+  background-color: antiquewhite;
+}
+
+.border {
+  border: 2px solid rgba(255, 0, 0, .5);
+  border-radius: 50px;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 120px;
+    padding-top: 120px;
+    background-color: white;
+}
+
+.mat-form-field {
+  width: 400px;
+}
+
+.title {
+  color: indigo;
+}
